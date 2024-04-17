@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Dune;
+    src: url(./fonts/bigmacca.ttf);
+}
+body{
+    font-family: Dune;
+    color: #F2F7F2;
+    background-color: #052C39;
+}
+*{
+    font-weight: normal !important;
+}
+h1{
+    font-size: 5rem;
+}
