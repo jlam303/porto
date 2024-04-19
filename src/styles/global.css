@@ -1,8 +1,14 @@
 @font-face {
     font-family: Dune;
-    src: url(./fonts/bigmacca.ttf);
+    src: url(./fonts/moonhouse.ttf);
+}
+html{
+    padding: 0%;
+    margin: 0%;
 }
 body{
+    padding: 0%;
+        margin: 0%;
     font-family: Dune;
     color: #F2F7F2;
     background-color: #052C39;
@@ -12,4 +18,79 @@ body{
 }
 h1{
     font-size: 5rem;
+
+}
+.greed{
+    position: absolute;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-rows: 8vh 8vh 8vh 8vh 8vh 8vh 8vh;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-areas:
+    "nav bio bio bio"
+    "nav bio bio bio"
+    "nav skill skill skill"
+    "nav skill skill skill"
+    "con skill skill skill"
+    "con skill skill skill"
+    "con skill skill skill"
+    ;
+    gap: 2rem;
+    width: calc(80vw + 6rem);
+    z-index: 1;
+}
+.greed > div{
+    font-size: 2rem;
+    padding: 1rem;
+    border: #F2F7F2 solid .2rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, .4) 1rem 1rem;
+    background-color:#052C39;
+}
+.navBox{
+    grid-area: nav;
+}
+.conBox {
+    grid-area: con;
+}
+.skillBox {
+    grid-area: skill;
+}
+.bioBox {
+    grid-area: bio;
+}
+.Typewriter{
+    font-size: 5rem;
+    
+}
+.header{
+    height: calc(44vh - 18rem);
+    display: flex;
+    justify-content: space-between;
+    width: calc(80vw + 6rem);
+    align-items: center;
+    margin: auto;
+}
+.links{
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+}
+a{
+    text-decoration: none;
+    color: #F2F7F2;
+}
+.stop{
+    display: none;
+
+}
+.balls{
+    z-index: 0;
+    background-color: #65AFFF;
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
 }
