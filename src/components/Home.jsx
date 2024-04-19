@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Typewriter from 'typewriter-effect';
 import { FaGithub,FaLinkedin } from "react-icons/fa";
+import { FaImage,FaHouse,FaSchool,FaFile } from "react-icons/fa6";
 const Home = () => {
   const stopp=()=>{ 
     const cursorElement = document.getElementsByClassName("Typewriter__cursor")[0];
@@ -10,7 +11,10 @@ const Home = () => {
   };
   }
   useEffect(()=>{
-    gsap.to(".b1", { duration: 3, width:"20rem",height:"20rem",repeat:-1,yoyo:true,ease: "power1.in", });
+    gsap.to(".b1", { duration: 2, width:"20rem",height:"20rem",repeat:-1,yoyo:true,ease: "power1.in", });
+    gsap.to(".b2", { duration: 2,delay:1, width:"25rem",height:"25rem",repeat:-1,yoyo:true,ease: "power1.in", });
+    gsap.to(".b3", { duration: 2,delay:-1, width:"15rem",height:"15rem",repeat:-1,yoyo:true,ease: "power1.in", });
+
   },[])
   return (
     <div>
@@ -35,12 +39,28 @@ const Home = () => {
       </div>
       </div>
         <div className='balls b1' style={{width:"15rem",height:"15rem",left:"10%",top:"60%"}}></div>
+        <div className='balls b2' style={{width:"20rem",height:"20rem",left:"60%",top:"25%"}}></div>
+        <div className='balls b3' style={{width:"10rem",height:"10rem",left:"90%",top:"80%"}}></div>
         
 
         <div className='greed'>
-          <div className='navBox'>Nav:</div>
-          <div className='bioBox'>Bio:</div>
-          <div className='conBox'>Contact:</div>
+          <div className='navBox'>
+            <a href="/"><FaHouse/>Home</a>
+            <a href="/projects"><FaImage/>Projects</a>
+            <a href=""><FaSchool/>Training</a>
+            <a href=""><FaFile />Resume</a>
+          </div>
+          <div className='bioBox'>Bio:
+          <div>Jonathan Lam is a high school student at the West-MEC coding program aiming to become a proficient software developer and innovate in the tech industry.With a drive for learning and a knack for problem-solving, he's poised to make waves in the world of software development.</div>
+            
+          </div>
+          <div className='conBox'>Contact:
+          <div>jplam9@gmail.com</div>
+          <div>jlam303@west-mec.org</div>
+          <div>jlam303@west-mec.edu</div>
+
+          <div>111-111-1111</div>
+          </div>
           <div className='skillBox'>Skills:</div>
         </div>
     </div>
