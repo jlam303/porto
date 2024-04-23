@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import Typewriter from 'typewriter-effect';
 import { FaGithub,FaLinkedin } from "react-icons/fa";
 import { FaImage,FaHouse,FaSchool,FaFile } from "react-icons/fa6";
-const Home = () => {
+const Training = () => {
   const stopp=()=>{ 
     const cursorElement = document.getElementsByClassName("Typewriter__cursor")[0];
     if (cursorElement) {
@@ -92,4 +92,4 @@ const Home = () => {
 }
 
 
-export default Home
+export default Training

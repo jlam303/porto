@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import Typewriter from 'typewriter-effect';
 import { FaGithub,FaLinkedin } from "react-icons/fa";
 import { FaImage,FaHouse,FaSchool,FaFile } from "react-icons/fa6";
-const Home = () => {
+const Projects = () => {
   const stopp=()=>{ 
     const cursorElement = document.getElementsByClassName("Typewriter__cursor")[0];
     if (cursorElement) {
@@ -27,10 +27,8 @@ const Home = () => {
       <div className='header'>
       <Typewriter
         onInit={(typewriter) => {
-      typewriter.typeString('Hello World!')
-      .pauseFor(1000)
-      .deleteAll()
-      .typeString("Jonathan Lam")
+      typewriter
+      .typeString("Projects")
       .pauseFor(1000)
       .callFunction(()=>{
           stopp();
@@ -49,15 +47,14 @@ const Home = () => {
         <div className='balls b3' style={{width:"10rem",height:"10rem",left:"90%",top:"80%"}}></div>
         
 
-        <div className='greed'>
+        <div className='greed greed2'>
           <div className='navBox'>
             <a href="/"><FaHouse/>Home</a>
             <a href="/projects"><FaImage/>Projects</a>
             <a href="/training"><FaSchool/>Training</a>
             <a href="/Jonathan-Lam Resume[2846].pdf (1).pdf" rel="noreferrer" target="_blank"><FaFile />Resume</a>
           </div>
-          <div className='bioBox'>Bio:
-          <div>Jonathan Lam is a high school student at the West-MEC coding program aiming to become a proficient software developer and innovate in the tech industry.With a drive for learning and a knack for problem-solving, he's poised to make waves in the world of software development.</div>
+          <div className='projBox'>Projects:
             
           </div>
           <div className='conBox'>Contact:
@@ -67,29 +64,10 @@ const Home = () => {
 
           <div>Phone: 111-111-1111</div>
           </div>
-          <div className='skillBox'>Skills:
-          <div className='skillBox2'>
-          <div className='skillBar'>
-            <div>HTML 90%:</div>
-            <div className='barOverlap bar1'></div>
-            <div className='bar'></div>
-          </div>
-          <div className='skillBar'>
-            <div>CSS 80%:</div>
-            <div className='barOverlap bar2'></div>
-            <div className='bar'></div>
-          </div>
-          <div className='skillBar'>
-            <div>JS 70%:</div>
-            <div className='barOverlap bar3'></div>
-            <div className='bar'></div>
-          </div>
-          </div>
-          </div>
         </div>
     </div>
   )
 }
 
 
-export default Home
+export default Projects

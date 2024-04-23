@@ -43,6 +43,8 @@ h1{
     width: calc(80vw + 6rem);
     z-index: 1;
 }
+
+
 .greed > div{
     font-size:2.5rem;
     padding: 1rem;
@@ -80,6 +82,30 @@ h1{
 }
 .bioBox {
     grid-area: bio;
+}
+.greed2 {
+    position: absolute;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-rows: 8vh 8vh 8vh 8vh 8vh 8vh 8vh;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-areas:
+        "nav proj proj proj"
+        "nav proj proj proj"
+        "nav proj proj proj"
+        "nav proj proj proj"
+        "con proj proj proj"
+        "con proj proj proj"
+        "con proj proj proj"
+    ;
+    gap: 2rem;
+    width: calc(80vw + 6rem);
+    z-index: 1;
+}
+.projBox{
+    grid-area: proj;
 }
 .Typewriter{
     font-size: 5rem;
